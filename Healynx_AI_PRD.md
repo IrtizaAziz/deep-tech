@@ -268,125 +268,193 @@ Priority assigned using MoSCoW method for v1 scope.
 
 ---
 
-## 9. Release Plan
+## 9. Go-to-Market & Commercialisation Roadmap
 
-### Version 1 — MVP (Months 1–12)
-**Target TRL after v1:** 6 (integrated platform validated in relevant environment)
+Healynx follows a 4-phase GTM roadmap from foundation through ASEAN scale. Two parallel paths are presented: a **seed-funded path** (RM 1.5M–2.5M, 5–8 person team) and a **bootstrap path** (grants + partner pre-commitments, 2–4 person team). Both paths deliver the same product; the bootstrap path runs 6–12 months behind the funded path with reduced commercial capacity.
 
-| Feature | Source IP | Priority |
+### 9.1 Dual-Path Overview
+
+| Dimension | Funded Path | Bootstrap Path |
 |---|---|---|
-| Structured supplement intake survey (FR-01) | IP 2 | Must Have |
-| AI supplement interaction detection and risk scoring (FR-02, FR-03) | IP 2 | Must Have |
-| Real-time personalised recommendations (FR-04) | IP 2 | Must Have |
-| Drug-supplement interaction alerts to clinician dashboard (FR-05) | IP 2 | Must Have |
-| Patient wellness score (FR-06) | IP 2 | Must Have |
-| Encrypted cloud upload of medical documents (FR-07) | IP 1 | Must Have |
-| AI-generated medical record summaries (FR-09) | IP 1 | Must Have |
-| Role-based access control (FR-10) | IP 1 | Must Have |
-| Emergency access override with audit trail (FR-13) | IP 1 | Must Have |
-| Patient mobile/web dashboard (FR-14) | IP 1 + IP 2 | Must Have |
-| Clinician dashboard with patient list, AI summaries, alerts (FR-18, FR-20) | IP 1 + IP 2 | Must Have |
-| Audit logs for access and sharing events (FR-21) | IP 1 | Must Have |
-| AI chatbot for patients (FR-17) | IP 1 + IP 2 | Should Have |
-| Medication and supplement reminders (FR-15) | IP 1 + IP 2 | Could Have |
-| Health trend visualisation (FR-16) | IP 1 + IP 2 | Could Have |
-| All NFRs (NFR-01 through NFR-08) | Both IPs | Must Have |
-
-**v1 Success Gate:** AI sensitivity ≥85%, 5 active pilot clinics, 30 active clinicians, 500 active patients, 0 critical security findings.
+| **Team Size (Year 1)** | 5–8 full-time | 2 founders + 1–2 RAs |
+| **First Revenue** | Month 15–18 | Month 18–24 |
+| **Break-Even** | Month 30–36 | Month 36–42 |
+| **Year 3 ARR** | RM 780K | RM 450K |
+| **Year 5 ARR** | RM 3.5M | RM 1.8M |
+| **Dilution** | 15–25% | Zero |
+| **Primary Risk** | Investor dependency | Founder burnout; slower execution |
 
 ---
 
-### Version 2 — Secure Sharing & Interoperability (Months 12–18)
-**Target TRL after v2:** 7 (integrated platform demonstrated in operational environment)
+### 9.2 Phase 1 — Foundation & Validation (Funded: Months 0–9 | Bootstrap: Months 0–12)
 
-| Feature | Source IP | Priority |
-|---|---|---|
-| Time-limited secure record sharing via links (FR-11) | IP 1 | Must Have |
-| Secure viewer with anti-copy restrictions (FR-12) | IP 1 | Must Have |
-| OCR digitisation of scanned documents (FR-08) | IP 1 | Must Have |
-| FHIR R4 API endpoints for EMR/EHR integration | IP 1 | Should Have |
-| Telemedicine platform API integration (US-09) | IP 1 + IP 2 | Should Have |
-| Smart clinician chatbot for patient record querying (FR-19) | IP 1 + IP 2 | Should Have |
-| Multi-language UI framework (Bahasa Malaysia) | Both IPs | Should Have |
+**Objective:** TRL 5→6, working MVP, pilot at UM Medical Centre. Core product features built and validated.
 
-**v2 Success Gate:** 15 paying clinic accounts, 2 telemedicine integrations, OCR accuracy ≥90%, secure sharing link feature passes penetration test.
+#### Product Delivery
+
+| Feature | Source IP | Priority | Funded | Bootstrap |
+|---|---|---|---|---|
+| Structured supplement intake survey (FR-01) | IP 2 | Must Have | Month 4–6 | Month 5–8 |
+| AI supplement interaction detection + risk scoring (FR-02, FR-03) | IP 2 | Must Have | Month 6–8 | Month 7–9 |
+| Real-time personalised recommendations (FR-04) | IP 2 | Must Have | Month 6–8 | Month 7–9 |
+| Interaction alerts → clinician dashboard (FR-05) | IP 2 | Must Have | Month 7–8 | Month 8–9 |
+| Patient wellness score (FR-06) | IP 2 | Must Have | Month 8–9 | Deferred to v1.1 |
+| Encrypted cloud upload of medical documents (FR-07) | IP 1 | Must Have | Month 5–7 | Month 6–8 |
+| AI-generated medical record summaries (FR-09) | IP 1 | Must Have | Month 7–9 | Month 8–10 |
+| Role-based access control (FR-10) | IP 1 | Must Have | Month 5–7 | Month 6–8 |
+| Emergency access override with audit trail (FR-13) | IP 1 | Must Have | Month 8–9 | Month 9–10 |
+| Patient mobile/web dashboard (FR-14) | IP 1 + IP 2 | Must Have | Month 7–9 | Month 8–10 |
+| Clinician dashboard with patient list, AI summaries, alerts (FR-18, FR-20) | IP 1 + IP 2 | Must Have | Month 7–9 | Month 8–10 |
+| Audit logs for access and sharing events (FR-21) | IP 1 | Must Have | Month 6–8 | Month 7–9 |
+| All NFRs (NFR-01 through NFR-08) | Both IPs | Must Have | Month 4–9 | Month 5–10 |
+
+**Deferred to next phase (Bootstrap only):** Patient wellness score (FR-06), AI chatbot (FR-17), medication reminders (FR-15), health trend visualisation (FR-16).
+
+#### Business Milestones
+
+| Milestone | Funded | Bootstrap | Dependency |
+|---|---|---|---|
+| UM IP licensing signed (both IPs) | Month 2–3 | Month 2–3 | UMCIE negotiation |
+| Knowledge transfer from UM inventors | Month 3 | Month 3 | Dr Lee, Dr Nurul Fauzani |
+| Cloud infrastructure provisioned (AWS MY Region) | Month 3 | Month 1–3 | AWS Activate / Azure for Startups |
+| Seed funding closed | Month 3–4 | N/A | Investor(s) |
+| Grant applications submitted (all 5 programmes) | Month 2 | Month 1–2 | CREST, MDEC, UMCIE, MIDA, MTDC |
+| First grant received | N/A | Month 3–6 | RM 75–200K from UMCIE + MDEC |
+| Partner pre-commitments secured | Month 4–6 | Month 3–6 | RM 80–150K from clinic/telemedicine partners |
+| Pilot deployed at UM Medical Centre | Month 8–9 | Month 9–12 | UM ethics approval |
+| AI accuracy benchmarked (≥85% sensitivity) | Month 9 | Month 12 | 200+ test cases |
+| Security penetration test passed | Month 9 | Month 12 | MY-certs accredited firm |
+
+**Phase 1 Exit Gate (Funded):** 5 pilot clinics, 30 clinicians, 500 patients, AI sensitivity ≥85%, 0 critical security findings.
+
+**Phase 1 Exit Gate (Bootstrap):** 1 pilot site (UMMC), 15 clinicians, 200 patients, AI sensitivity ≥85%, at least 1 grant renewal secured.
 
 ---
 
-### Version 3 — Ecosystem Expansion & ASEAN Localisation (Months 18–24)
-**Target TRL after v3:** 8 (complete and qualified platform)
+### 9.3 Phase 2 — Partnership & Regulatory Readiness (Funded: Months 9–18 | Bootstrap: Months 12–24)
 
-| Feature | Source IP | Priority |
-|---|---|---|
-| Insurance wellness scoring API and integration | IP 2 | Should Have |
-| Wearable device data ingestion (Apple Health, Google Fit, Garmin) | Both IPs | Could Have |
-| ASEAN multi-language localisation (Bahasa Indonesia, Thai, Vietnamese) | Both IPs | Should Have |
-| Multi-region cloud deployment (Singapore, Indonesia, Thailand) | Both IPs | Should Have |
-| Corporate wellness aggregate dashboard | IP 1 + IP 2 | Could Have |
-| ASEAN supplement product database expansion (Jamu, TCM, Ayurveda) | IP 2 | Should Have |
-| National healthcare integration pathway (MyHDW compatibility) | IP 1 | Could Have |
+**Objective:** Commercial partnerships, PDPA compliance, secure sharing features, first revenue. Target TRL 6→7.
 
-**v3 Success Gate:** 40+ paying accounts, 3 ASEAN country deployments initiated, RM 32,000 MRR, AI accuracy ≥92% sensitivity.
+#### Product Delivery
+
+| Feature | Source IP | Priority | Funded | Bootstrap |
+|---|---|---|---|---|
+| Time-limited secure record sharing via links (FR-11) | IP 1 | Must Have | Month 14–16 | Month 20–22 |
+| Secure viewer with anti-copy restrictions (FR-12) | IP 1 | Must Have | Month 14–16 | Month 20–22 |
+| OCR digitisation of scanned documents (FR-08) | IP 1 | Must Have | Month 15–18 | Month 22–24 |
+| FHIR R4 API endpoints for EMR/EHR integration | IP 1 | Should Have | Month 16–18 | Month 24 |
+| Telemedicine platform API integration (US-09) | IP 1 + IP 2 | Should Have | Month 15–17 | Month 20–22 |
+| Smart clinician chatbot for patient record querying (FR-19) | IP 1 + IP 2 | Should Have | Month 14–16 | Month 22–24 |
+| Multi-language UI framework (Bahasa Malaysia) | Both IPs | Should Have | Month 16–18 | Month 22–24 |
+| Patient wellness score (FR-06) | IP 2 | Must Have | Already in v1 | Month 12–14 |
+| AI chatbot for patients (FR-17) | IP 1 + IP 2 | Should Have | Month 14–16 | Month 14–16 |
+| Medication and supplement reminders (FR-15) | IP 1 + IP 2 | Could Have | Month 16–18 | Month 14–16 |
+| Health trend visualisation (FR-16) | IP 1 + IP 2 | Could Have | Month 16–18 | Month 14–16 |
+
+#### Business Milestones
+
+| Milestone | Funded | Bootstrap | Dependency |
+|---|---|---|---|
+| 3–5 private clinic pilots active | Month 12 | Month 15 | Partner pre-commitments |
+| PDPA compliance programme initiated (DPO appointed) | Month 9 | Month 12 | Legal / DPO |
+| MDA regulatory pathway determined | Month 12 | Month 15 | SaMD classification confirmation |
+| AI model v2 (≥90% sensitivity) | Month 14 | Month 16 | Expanded training data from pilots |
+| ISO 27001 alignment audit | Month 18 | Month 24 | Third-party auditor |
+| B2B sales capability established | Month 15 | Month 20 | 1–2 sales hires |
+| First paying accounts | Month 15–18 | Month 18–24 | 6–12 month B2B sales cycle |
+| 2 telemedicine integrations live | Month 18 | Month 24 | API contracts signed |
+
+**Phase 2 Exit Gate (Funded):** 15 paying clinic accounts, 2 telemedicine integrations, OCR ≥90%, RM 5K MRR, secure sharing passes penetration test.
+
+**Phase 2 Exit Gate (Bootstrap):** 8–12 paying accounts, RM 5–8K MRR, OCR ≥90%, first telemedicine integration, 3 pilot sites converted to paid.
 
 ---
 
-### Contingency Release Plan — Bootstrap Path (Zero Seed Funding)
+### 9.4 Phase 3 — Commercial Launch & Revenue Scale (Funded: Months 15–30 | Bootstrap: Months 18–36)
 
-If seed funding (D7) is not secured, the following phased plan executes the same product roadmap using grant funding, partner pre-commitments, and university resources. All feature requirements remain unchanged; only the timeline and team composition shift.
+**Objective:** Revenue generation, market penetration, break-even approach. Target TRL 7→8.
 
-#### v1 — Lean MVP (Months 1–9, Bootstrap)
-**Team:** 2 founders (full-time) + 1 research assistant (part-time)
-**Funding:** RM 200–400K from 1–2 grants (UMCIE + MDEC GAH) + RM 30–60K partner pre-commitment + RM 75K AWS credits
+#### Product Delivery
 
-| Feature | Source IP | Priority |
+| Feature | Source IP | Priority | Funded | Bootstrap |
+|---|---|---|---|---|
+| Insurance wellness scoring API and integration | IP 2 | Should Have | Month 20–24 | Month 28–32 |
+| Wearable device data ingestion (Apple Health, Google Fit) | Both IPs | Could Have | Month 22–26 | Month 30–34 |
+| ASEAN multi-language localisation (Bahasa Indonesia, Thai, Vietnamese) | Both IPs | Should Have | Month 22–28 | Month 32–36 |
+| Multi-region cloud deployment (Singapore region) | Both IPs | Should Have | Month 22–24 | Month 30–32 |
+| Corporate wellness aggregate dashboard | IP 1 + IP 2 | Could Have | Month 20–24 | Month 28–32 |
+| ASEAN supplement product database expansion | IP 2 | Should Have | Month 22–28 | Month 30–36 |
+
+#### Business Milestones
+
+| Milestone | Funded | Bootstrap |
 |---|---|---|
-| Structured supplement intake survey (FR-01) | IP 2 | Must Have |
-| AI supplement interaction detection and risk scoring (FR-02, FR-03) | IP 2 | Must Have |
-| Real-time personalised recommendations (FR-04) | IP 2 | Must Have |
-| Drug-supplement interaction alerts to clinician dashboard (FR-05) | IP 2 | Must Have |
-| Encrypted cloud upload of medical documents (FR-07) | IP 1 | Must Have |
-| AI-generated medical record summaries (FR-09) | IP 1 | Must Have |
-| Role-based access control (FR-10) | IP 1 | Must Have |
-| Emergency access override with audit trail (FR-13) | IP 1 | Must Have |
-| Patient mobile/web dashboard (FR-14) | IP 1 + IP 2 | Must Have |
-| Clinician dashboard with patient list, AI summaries, alerts (FR-18, FR-20) | IP 1 + IP 2 | Must Have |
-| Audit logs for access and sharing events (FR-21) | IP 1 | Must Have |
-| All NFRs (NFR-01 through NFR-08) | Both IPs | Must Have |
+| B2B sales team active | Month 15 (3–5 people) | Month 24 (1–2 people) |
+| 20 paying accounts | Month 18 | Month 24 |
+| Conference marketing begins | Month 18 | Month 24 |
+| Corporate wellness pilot (1–2 employers) | Month 20 | Month 28 |
+| First ASEAN deployment (Singapore) | Month 24–30 | Month 32–36 |
+| 40+ paying accounts, RM 32K MRR | Month 24 | Month 30 |
+| 98 paying accounts | Month 36 | Month 36–42 |
+| **Break-Even** | **Month 30–36** | **Month 36–42** |
 
-**Deferred to v1.1 (Bootstrap):** Patient wellness score (FR-06), AI chatbot (FR-17), medication reminders (FR-15), health trend visualisation (FR-16).
+---
 
-**v1 Bootstrap Success Gate:** AI sensitivity ≥85%, 1 pilot site (UM Medical Centre), 15 active clinicians, 200 active patients, 0 critical security findings, at least 1 grant renewal or second grant secured.
+### 9.5 Phase 4 — ASEAN Expansion (Years 3–5)
 
-#### v1.1 — Pilot Expansion (Months 9–15, Bootstrap)
-**Team:** 2 founders + 2 RAs (or 1 junior engineer, grant-funded)
-**Funding:** Second-tranche grants (CREST/MDEC) + first partner pre-payment
+**Objective:** Multi-country, multi-language regional scale. 200–380 paying accounts, RM 1.8M–3.5M ARR.
 
-| Feature | Source IP | Priority |
-|---|---|---|
-| Patient wellness score (FR-06) | IP 2 | Must Have |
-| AI chatbot for patients (FR-17) | IP 1 + IP 2 | Should Have |
-| Medication and supplement reminders (FR-15) | IP 1 + IP 2 | Could Have |
-| Health trend visualisation (FR-16) | IP 1 + IP 2 | Could Have |
-| Expand pilot to 2–3 partner clinics | — | Must Have |
+| Wave | Country | Funded Entry | Bootstrap Entry | Strategy |
+|---|---|---|---|---|
+| Wave 1 | Singapore | Year 2–3 | Year 3–4 | Local subsidiary; HSA regulatory; telemedicine partners |
+| Wave 2 | Indonesia | Year 3–4 | Year 4–5 | JV with Indonesian healthcare group; Bahasa Indonesia; Jamu database |
+| Wave 3 | Thailand | Year 3–4 | Year 5 | Private hospital partnerships; FDA Thailand |
+| Wave 4 | Vietnam | Year 4–5 | Year 5+ | Health-tech startup partners |
+| Wave 5 | Philippines | Year 4–5 | Year 5+ | Direct English deployment; PhilHealth integration |
 
-**v1.1 Bootstrap Success Gate:** 3 pilot sites, 30 active clinicians, 500 active patients, first 2–3 paying pilot-to-paid conversion accounts.
+---
 
-#### v2 — Secure Sharing & First Revenue (Months 15–24, Bootstrap)
-**Team:** 3–5 (founders + 1–3 engineers, funded by revenue + grants)
-**Funding:** Early revenue (RM 3–5K MRR) + CREST/MTDC scale-up grant
+### 9.6 5-Year Financial Projection
 
-| Feature | Source IP | Priority |
-|---|---|---|
-| Time-limited secure record sharing via links (FR-11) | IP 1 | Must Have |
-| Secure viewer with anti-copy restrictions (FR-12) | IP 1 | Must Have |
-| OCR digitisation of scanned documents (FR-08) | IP 1 | Must Have |
-| FHIR R4 API endpoints for EMR/EHR integration | IP 1 | Should Have |
-| Telemedicine platform API integration (US-09) | IP 1 + IP 2 | Should Have |
-| Smart clinician chatbot for patient record querying (FR-19) | IP 1 + IP 2 | Should Have |
+| Metric | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+|---|---|---|---|---|---|
+| **Paying Accounts (Funded)** | 0 | 20 | 98 | 200 | 380 |
+| **Paying Accounts (Bootstrap)** | 0 | 8 | 40 | 90 | 180 |
+| **ARR Funded (RM)** | 0 | 150K | 780K | 1.8M | 3.5M |
+| **ARR Bootstrap (RM)** | 0 | 50K | 400K | 900K | 1.8M |
+| **Gross Margin** | — | 60% | 65% | 68% | 72% |
+| **Net Margin (Funded)** | Negative | Negative | ~5% | ~15% | ~22% |
+| **Cash-Flow Positive (Funded)** | No | No | Month 30–36 | Yes | Yes |
+| **Cash-Flow Positive (Bootstrap)** | No | No | Month 36–42 | Yes | Yes |
 
-**v2 Bootstrap Success Gate:** 8–12 paying accounts, RM 5–8K MRR, OCR accuracy ≥90%, first telemedicine API integration.
+---
 
-**Bootstrap key difference vs funded path:** 6–12 month delay in reaching each milestone. Year 3 ARR target of RM 400–500K (vs RM 780K funded). Break-even at Month 36–42 (vs Month 30–36 funded). The product is the same; only the pace and team size differ.
+### 9.7 Critical Path Dependencies
+
+| # | Dependency | Required By | Status |
+|---|---|---|---|
+| D1 | UM IP licensing signed (both IPs: UI 2025002953, PI 2025007955) | Month 3 | Not yet initiated |
+| D2 | Knowledge transfer from IP inventors (Dr. Lee, Dr. Nurul Fauzani) | Month 3 | Contact established |
+| D3 | PDPA compliance + Data Protection Officer appointment | Month 9 (Funded) / Month 12 (Bootstrap) | Not yet initiated |
+| D4 | Pilot clinic agreements (UMMC + 3–5 private clinics) | Month 6 (Funded) / Month 9 (Bootstrap) | Not yet initiated |
+| D5 | Cloud infrastructure (AWS Malaysia Region or equivalent) | Month 3 | Not yet initiated |
+| D6 | Healthcare cybersecurity penetration test (MY-certs) | Month 12 | Not yet initiated |
+| D7 | Seed/commercialisation funding secured (Funded Path) | Month 3 | Not yet secured |
+| D8 | Bootstrap contingency: ≥1 grant secured (UMCIE, MDEC GAH, CREST) | Month 3–6 | Not yet initiated |
+| D9 | Bootstrap contingency: ≥1 partner pre-commitment (RM 30–60K) | Month 6 | Not yet initiated |
+| D10 | Startup cloud programme activation (RM 50–100K credits) | Month 1 | Not yet initiated |
+
+---
+
+### 9.8 Top Risks to Roadmap
+
+| # | Risk | Likelihood | Impact | Mitigation |
+|---|---|---|---|---|
+| R1 | **Regulatory delay** — PDPA/MDA takes 12+ months longer than planned | Medium | High | Engage healthcare regulatory consultant Month 1; design compliance-ready from Day 1 |
+| R2 | **AI underperforms in diverse population** — <85% sensitivity on real Malaysian patients | Medium | High | Expand training dataset during Phase 1 validation; continuous learning pipeline with clinician feedback |
+| R3 | **Clinician adoption failure** — doctors ignore or distrust AI alerts | Medium | Medium | Human-in-the-loop design; clinicians in UX co-design; publish validation study; show evidence sources per alert |
+| R4 | **Seed funding gap** — D7 delayed or not secured | Medium | High | Bootstrap contingency: grants + partner pre-commitments execute same product, 6–12 months slower |
+| R5 | **IP licensing terms unfavourable** — royalty/equity terms make unit economics unviable | Low | High | Negotiate during Phase 1 before significant investment; model at 3/5/8% royalty scenarios; explore grant-based pathways |
 
 ---
 
