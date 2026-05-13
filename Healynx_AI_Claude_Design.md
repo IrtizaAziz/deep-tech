@@ -12,7 +12,7 @@ You are building the frontend for **Healynx**, a preventive healthcare SaaS plat
 |---|---|---|
 | Framework | Next.js 14 (App Router) + React 18 | Use `'use client'` only where interactivity required; prefer RSC for data display |
 | Styling | Tailwind CSS 3.x + CSS custom properties | Design tokens in `:root` and `[data-theme="dark"]`; mapped via `tailwind.config.js theme.extend` |
-| Components | Radix UI primitives | Dialog, Select, Tabs, Toggle, Switch, Tooltip, Popover, Accordion, Checkbox, RadioGroup, Label, Slot |
+| Components | Radix UI primitives + shadcn/ui | Dialog, Select, Tabs, Toggle, Switch, Tooltip, Popover, Accordion, Checkbox, RadioGroup, Label, Slot, and all shadcn/ui composed components |
 | Server State | TanStack Query 5.x | `staleTime: 30_000` for dashboard data; `staleTime: 300_000` for AI summaries; retry 2 on GET, 0 on mutation |
 | Client State | Zustand 4.x | Only for: auth session, survey draft, emergency session, UI preferences (sidebar collapsed, active tab) |
 | Charts | Recharts 2.x | Wellness trend line charts, score bar charts |
@@ -22,7 +22,7 @@ You are building the frontend for **Healynx**, a preventive healthcare SaaS plat
 | Real-time | WebSocket (native `WebSocket` API) | Reconnect with exponential backoff (1s→2s→4s→8s→max 30s); fallback to 10s `setInterval` polling |
 | HTTP Client | Native `fetch` (no axios) | Wrap in a thin `apiClient.ts` with base URL, auth header injection, 401 interceptor, and error normalisation |
 
-**Do NOT add:** animation libraries (framer-motion, GSAP), component libraries (MUI, Chakra, shadcn UI beyond Radix), utility frameworks (clsx — use template literals or a 4-line `cn()` helper), date libraries (use `Intl.DateTimeFormat` and `Intl.RelativeTimeFormat`).
+**Do NOT add:** animation libraries (framer-motion, GSAP), component libraries (MUI, Chakra), utility frameworks (clsx — use template literals or a 4-line `cn()` helper), date libraries (use `Intl.DateTimeFormat` and `Intl.RelativeTimeFormat`).
 
 ---
 

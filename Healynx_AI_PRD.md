@@ -250,17 +250,21 @@ Priority assigned using MoSCoW method for v1 scope.
 | R4 | **Data privacy breach:** A security vulnerability exposes patient health data, damaging trust and triggering PDPA penalties. | Low | Critical | Penetration testing before each release; encrypted at rest and in transit from Day 1; third-party security audit; bug bounty program post-launch; cyber insurance coverage. |
 | R5 | **IP licensing terms unfavourable:** UM licensing terms (royalty rate, exclusivity scope, equity requirements) make the unit economics unviable or restrict commercial flexibility. | Low | High | Negotiate licensing terms during Phase 1 before significant development investment; model financial scenarios under different royalty rates (3%, 5%, 8%); explore grant-based commercialisation pathways that cap royalty obligations. |
 | R6 | **Competitor response:** An established EMR vendor or well-funded health-tech startup launches a similar AI supplement module, eroding first-mover advantage. | Medium | Medium | Accelerate patent-protected feature development; focus on building the expert-labelled Malaysian supplement database as a data moat; secure reference customers and clinical validation publications as credibility moats. |
+| R7 | **Seed funding gap:** Seed funding (D7) is delayed or not secured, leaving the team without the RM 1.5M–2.5M budget assumed for the funded development path. | Medium | High | Execute the 3-path bootstrap contingency: (1) apply to 5 Malaysian grants simultaneously by Month 2, (2) secure 2 partner pre-commitments by Month 6, (3) leverage UM infrastructure and startup cloud credits to operate at RM 8–12K/month burn. The bootstrap path reaches the same product milestones 6–12 months later with zero dilution. |
 
 ### Dependencies
 | # | Dependency | Owner | Required By | Status |
 |---|---|---|---|---|
 | D1 | UM IP licensing agreement signed (both IPs: UI 2025002953 and PI 2025007955) | UMCIE / Founding Team | Month 3 (pre-development) | Not yet initiated |
 | D2 | Knowledge transfer from IP inventors (Dr. Lee Ching Shya, Dr. Nurul Fauzani Jamaluddin) — access to research codebase, expert-labelled training dataset, and algorithm documentation | UM Inventors | Month 3 (development start) | Contact established |
-| D3 | PDPA certification and data protection officer appointment | Founding Team / Legal | Month 18 (commercial launch) | Not yet initiated |
+| D3 | PDPA compliance and data protection officer appointment | Founding Team / Legal | Month 18 (commercial launch) | Not yet initiated |
 | D4 | Pilot clinic agreements (UM Medical Centre + 3–5 private clinics) for Phase 1 validation | Business Development | Month 6 (pilot start) | Not yet initiated |
 | D5 | Cloud infrastructure provisioning (AWS Malaysia Region or equivalent) with healthcare-appropriate security configuration | Engineering | Month 3 (development environment) | Not yet initiated |
 | D6 | Healthcare cybersecurity penetration test by MY-certs or equivalent accredited firm | Third-Party Vendor | Month 12 (pre-pilot security review) | Not yet initiated |
-| D7 | Seed/commercialisation funding (RM 1.5M–3M) secured | Founding Team / Investors | Month 3 (to fund development and validation) | Not yet secured |
+| D7 | Seed/commercialisation funding (RM 1.5M–2.5M) secured | Founding Team / Investors | Month 3 (to fund development and validation) | Not yet secured |
+| **D8** | **Bootstrap contingency — at least 1 grant secured (UMCIE, MDEC GAH, or CREST) as bridge funding if D7 fails** | **Founding Team** | **Month 3 (to begin lean development)** | **Not yet initiated** |
+| **D9** | **Bootstrap contingency — at least 1 partner pre-commitment (clinic group, telemedicine platform, or supplement manufacturer) funding RM 30–60K in development costs** | **Business Development** | **Month 6 (to sustain operations if D7 fails)** | **Not yet initiated** |
+| **D10** | **Startup cloud programme activation (AWS Activate, Azure for Startups, or GCP for Startups) for RM 50–100K in cloud credits** | **Engineering** | **Month 1 (to eliminate Year 1 infrastructure costs)** | **Not yet initiated** |
 
 ---
 
@@ -322,7 +326,67 @@ Priority assigned using MoSCoW method for v1 scope.
 | ASEAN supplement product database expansion (Jamu, TCM, Ayurveda) | IP 2 | Should Have |
 | National healthcare integration pathway (MyHDW compatibility) | IP 1 | Could Have |
 
-**v3 Success Gate:** 40+ paying accounts, 3 ASEAN country deployments initiated, RM 45,000 MRR, AI accuracy ≥92% sensitivity.
+**v3 Success Gate:** 40+ paying accounts, 3 ASEAN country deployments initiated, RM 32,000 MRR, AI accuracy ≥92% sensitivity.
+
+---
+
+### Contingency Release Plan — Bootstrap Path (Zero Seed Funding)
+
+If seed funding (D7) is not secured, the following phased plan executes the same product roadmap using grant funding, partner pre-commitments, and university resources. All feature requirements remain unchanged; only the timeline and team composition shift.
+
+#### v1 — Lean MVP (Months 1–9, Bootstrap)
+**Team:** 2 founders (full-time) + 1 research assistant (part-time)
+**Funding:** RM 200–400K from 1–2 grants (UMCIE + MDEC GAH) + RM 30–60K partner pre-commitment + RM 75K AWS credits
+
+| Feature | Source IP | Priority |
+|---|---|---|
+| Structured supplement intake survey (FR-01) | IP 2 | Must Have |
+| AI supplement interaction detection and risk scoring (FR-02, FR-03) | IP 2 | Must Have |
+| Real-time personalised recommendations (FR-04) | IP 2 | Must Have |
+| Drug-supplement interaction alerts to clinician dashboard (FR-05) | IP 2 | Must Have |
+| Encrypted cloud upload of medical documents (FR-07) | IP 1 | Must Have |
+| AI-generated medical record summaries (FR-09) | IP 1 | Must Have |
+| Role-based access control (FR-10) | IP 1 | Must Have |
+| Emergency access override with audit trail (FR-13) | IP 1 | Must Have |
+| Patient mobile/web dashboard (FR-14) | IP 1 + IP 2 | Must Have |
+| Clinician dashboard with patient list, AI summaries, alerts (FR-18, FR-20) | IP 1 + IP 2 | Must Have |
+| Audit logs for access and sharing events (FR-21) | IP 1 | Must Have |
+| All NFRs (NFR-01 through NFR-08) | Both IPs | Must Have |
+
+**Deferred to v1.1 (Bootstrap):** Patient wellness score (FR-06), AI chatbot (FR-17), medication reminders (FR-15), health trend visualisation (FR-16).
+
+**v1 Bootstrap Success Gate:** AI sensitivity ≥85%, 1 pilot site (UM Medical Centre), 15 active clinicians, 200 active patients, 0 critical security findings, at least 1 grant renewal or second grant secured.
+
+#### v1.1 — Pilot Expansion (Months 9–15, Bootstrap)
+**Team:** 2 founders + 2 RAs (or 1 junior engineer, grant-funded)
+**Funding:** Second-tranche grants (CREST/MDEC) + first partner pre-payment
+
+| Feature | Source IP | Priority |
+|---|---|---|
+| Patient wellness score (FR-06) | IP 2 | Must Have |
+| AI chatbot for patients (FR-17) | IP 1 + IP 2 | Should Have |
+| Medication and supplement reminders (FR-15) | IP 1 + IP 2 | Could Have |
+| Health trend visualisation (FR-16) | IP 1 + IP 2 | Could Have |
+| Expand pilot to 2–3 partner clinics | — | Must Have |
+
+**v1.1 Bootstrap Success Gate:** 3 pilot sites, 30 active clinicians, 500 active patients, first 2–3 paying pilot-to-paid conversion accounts.
+
+#### v2 — Secure Sharing & First Revenue (Months 15–24, Bootstrap)
+**Team:** 3–5 (founders + 1–3 engineers, funded by revenue + grants)
+**Funding:** Early revenue (RM 3–5K MRR) + CREST/MTDC scale-up grant
+
+| Feature | Source IP | Priority |
+|---|---|---|
+| Time-limited secure record sharing via links (FR-11) | IP 1 | Must Have |
+| Secure viewer with anti-copy restrictions (FR-12) | IP 1 | Must Have |
+| OCR digitisation of scanned documents (FR-08) | IP 1 | Must Have |
+| FHIR R4 API endpoints for EMR/EHR integration | IP 1 | Should Have |
+| Telemedicine platform API integration (US-09) | IP 1 + IP 2 | Should Have |
+| Smart clinician chatbot for patient record querying (FR-19) | IP 1 + IP 2 | Should Have |
+
+**v2 Bootstrap Success Gate:** 8–12 paying accounts, RM 5–8K MRR, OCR accuracy ≥90%, first telemedicine API integration.
+
+**Bootstrap key difference vs funded path:** 6–12 month delay in reaching each milestone. Year 3 ARR target of RM 400–500K (vs RM 780K funded). Break-even at Month 36–42 (vs Month 30–36 funded). The product is the same; only the pace and team size differ.
 
 ---
 

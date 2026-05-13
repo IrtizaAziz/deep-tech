@@ -128,16 +128,16 @@ Focusing on private clinics, telemedicine platforms, and corporate wellness in u
 
 **SOM — Serviceable Obtainable Market (Year 3 target)**
 
-Targeting 5% penetration of the SAM through direct B2B sales, channel partnerships, and university-clinic networks:
+Targeting penetration of the SAM through direct B2B sales, channel partnerships, and university-clinic networks. Healthcare B2B sales cycles average 6–12 months, so Year 3 represents the first full year of scaled commercial operations:
 
 | Segment | Target Accounts | ARPU (Annual) | Year 3 Revenue Target |
 |---|---|---|---|
-| Private clinics | 150 | RM 6,000 | RM 900,000 |
-| Multi-branch clinic groups | 15 | RM 24,000 | RM 360,000 |
-| Telemedicine platforms | 3 | RM 48,000 | RM 144,000 |
-| Corporate wellness | 20 | RM 18,000 | RM 360,000 |
-| API licensing (data analytics) | 5 | RM 12,000 | RM 60,000 |
-| **Total SOM (Year 3)** | | | **~RM 1.82M ARR** |
+| Private clinics | 80 | RM 5,000 | RM 400,000 |
+| Multi-branch clinic groups | 5 | RM 30,000 | RM 150,000 |
+| Telemedicine platforms | 2 | RM 40,000 | RM 80,000 |
+| Corporate wellness | 8 | RM 15,000 | RM 120,000 |
+| API licensing (data analytics) | 3 | RM 10,000 | RM 30,000 |
+| **Total SOM (Year 3)** | **98** | | **~RM 780K ARR** |
 
 ### 2.3 Key Market Drivers
 
@@ -279,43 +279,58 @@ Healynx generates revenue through a **multi-tier B2B SaaS model** with recurring
 
 ### 4.3 Pricing Tier Structure
 
+Pricing is benchmarked against Malaysian clinic EMR rates (RM 200–500/month for basic systems without AI) and calibrated for the private clinic segment. All tiers assume cloud-native multi-tenant delivery with negligible marginal cost per additional clinic.
+
 **Clinic Tier**
 
 | Plan | Monthly (RM) | Annual (RM) | Includes |
 |---|---|---|---|
-| **Essentials** | 500 | 5,000 | Up to 3 clinician accounts; 500 patient records; AI summarisation; supplement assessment module; secure sharing |
-| **Professional** | 900 | 9,000 | Up to 10 clinician accounts; 2,000 patient records; advanced AI analytics; chatbot interface; priority support |
+| **Essentials** | 350 | 3,500 | Up to 3 clinician accounts; 500 patient records; AI summarisation; supplement assessment module; secure sharing |
+| **Professional** | 700 | 7,000 | Up to 10 clinician accounts; 2,000 patient records; advanced AI analytics; chatbot interface; priority support |
 | **Enterprise** | Custom | Custom | Unlimited accounts; unlimited records; white-label option; custom integrations; dedicated CSM; SLA |
 
 **Telemedicine / Platform Tier**
 
 | Plan | Monthly (RM) | Annual (RM) | Includes |
 |---|---|---|---|
-| **API Starter** | 1,500 | 15,000 | Up to 5,000 API calls/month; supplement intelligence endpoint; basic analytics |
-| **API Growth** | 3,500 | 36,000 | Up to 25,000 API calls/month; both AI endpoints; webhook integration; SLA |
+| **API Starter** | 1,200 | 12,000 | Up to 5,000 API calls/month; supplement intelligence endpoint; basic analytics |
+| **API Growth** | 2,800 | 28,800 | Up to 25,000 API calls/month; both AI endpoints; webhook integration; SLA |
 | **API Enterprise** | Custom | Custom | Unlimited calls; white-label; dedicated infrastructure; co-marketing |
 
 **Corporate Wellness Tier**
 
 | Plan | Annual (RM) | Per Employee/Year | Includes |
 |---|---|---|---|
-| **Starter** | 9,000 | RM 18 (up to 500) | Supplement/lifestyle assessment; individual health reports; basic aggregate dashboard |
-| **Growth** | 25,000 | RM 12 (up to 2,500) | Full assessment + tracking; trend analytics; wellness scoring; management dashboard |
+| **Starter** | 7,200 | RM 14 (up to 500) | Supplement/lifestyle assessment; individual health reports; basic aggregate dashboard |
+| **Growth** | 20,000 | RM 10 (up to 2,500) | Full assessment + tracking; trend analytics; wellness scoring; management dashboard |
 | **Enterprise** | Custom | Custom (5,000+) | All features + executive health reporting; insurance integration readiness; dedicated account management |
 
 ### 4.4 Cost Structure & Margin Profile
 
-| Cost Category | % of Revenue (Steady State) | Detail |
-|---|---|---|
-| Cloud Infrastructure (AWS/GCP) | 12–15% | Multi-tenant architecture; Malaysian region deployment; scaling with user growth |
-| AI/ML Compute | 8–10% | Model inference, training, and improvement; decreases as % of revenue with scale |
-| Engineering & Product | 25–30% | Core platform development, security, AI model maintenance |
-| Sales & Marketing | 20–25% | B2B healthcare sales team; conference presence; digital marketing |
-| Compliance & Security | 5–8% | Annual audits, penetration testing, certifications, legal |
-| IP Royalty (UM) | 5–8% | Revenue share to UM per licensing agreement |
-| G&A | 8–10% | Management, administration, office |
-| **Gross Margin Target** | **65–75%** | Characteristic of enterprise SaaS |
-| **Net Margin Target (Year 5)** | **20–30%** | Post-investment, steady-state operations |
+Healthcare SaaS economics shift significantly from pre-revenue to growth to steady-state. The table below reflects this evolution rather than a single steady-state snapshot.
+
+| Cost Category | Year 1–2 (Pre/early revenue) | Year 3–4 (Growth) | Year 5+ (Steady State) |
+|---|---|---|---|
+| Cloud Infrastructure | 15–18% | 12–15% | 10–12% |
+| AI/ML Compute | 12–15% | 10–12% | 8–10% |
+| Engineering & Product | 40–50% | 30–35% | 25–30% |
+| Sales & Marketing | 15–20% | 30–35% | 25–30% |
+| Compliance & Security | 10–12% | 8–10% | 5–8% |
+| IP Royalty (UM) | 5–8% | 5–8% | 5–8% |
+| G&A | 10–12% | 8–10% | 8–10% |
+| **Gross Margin** | **55–65%** | **60–70%** | **65–75%** |
+| **Net Margin** | **Negative (investment phase)** | **-5% to +10%** | **15–25%** |
+
+**Break-Even Point:** Estimated at Month 30–36 (mid-to-late Year 3), when recurring revenue covers operating costs. This is consistent with enterprise healthcare SaaS benchmarks, where 2.5–3 years to break-even is typical given long sales cycles and compliance overhead.
+
+**Unit Economics at Scale:**
+- Average Revenue Per Clinic Account (ARPU): RM 5,000/year
+- Gross Margin per Account: ~RM 3,500/year
+- Customer Acquisition Cost (CAC): RM 3,000–5,000 (B2B healthcare)
+- CAC Payback: 10–17 months
+- Lifetime Value (LTV) / CAC Ratio: 5:1 to 8:1 (assuming 5-year average retention)
+
+**Rationale for Sales & Marketing ramp:** Early years require lower S&M spend (the focus is product validation and pilot deployments, not paid acquisition). From Year 3 onward, S&M rises to 30–35% as a dedicated B2B healthcare sales team is deployed — consistent with health-tech industry norms (30–50%).
 
 ### 4.5 Recurring Revenue & Switching Cost Advantages
 
@@ -353,14 +368,14 @@ Healynx generates revenue through a **multi-tier B2B SaaS model** with recurring
 
 | KPI | Phase 1 Target | Phase 2 Target | Phase 3 Target |
 |---|---|---|---|
-| **Active Clinician Users** | 30 | 150 | 400 |
-| **Active Patient Users** | 500 | 3,000 | 12,000 |
+| **Active Clinician Users** | 30 | 100 | 200 |
+| **Active Patient Users** | 500 | 2,500 | 8,000 |
 | **AI Supplement Interaction Detection Accuracy (Sensitivity)** | >85% | >90% | >93% |
 | **AI Summarisation Accuracy (vs. clinician review)** | >80% | >88% | >92% |
 | **Clinical Workflow Time Reduction (record review)** | 30% | 45% | 55% |
 | **Number of Supplement Products in Database** | 500 | 2,000 | 5,000+ |
-| **Paying Accounts** | 0 (pilot) | 15 | 40+ |
-| **MRR (Monthly Recurring Revenue)** | RM 0 | RM 8,000 | RM 45,000 |
+| **Paying Accounts** | 0 (pilot) | 10 | 40+ |
+| **MRR (Monthly Recurring Revenue)** | RM 0 | RM 5,000 | RM 32,000 |
 
 ### 5.4 Initial Target Partners & Collaborators
 
@@ -472,50 +487,175 @@ The platform is architected for **cloud-native, multi-region, multi-language** d
 
 ---
 
-## 8. The Ask
+## 8. The Ask & Financial Model
 
 ### 8.1 Funding Requirement
 
-**Seeking: RM 1.5M – RM 3M in Seed / Commercialisation Funding**
+**Seeking: RM 1.5M – RM 2.5M in Seed / Commercialisation Funding**
 
-This capital will fund the 24-month journey from integrated prototype to revenue-generating commercial platform, covering AI development, security hardening, clinical validation, regulatory compliance, commercial launch, and initial operations.
+This capital funds the 24-month journey from integrated prototype to revenue-generating commercial platform. A leaner RM 1.5M allocation covers a 5-person core team; the upper bound of RM 2.5M enables a faster 8-person team with parallel workstreams.
 
 ### 8.2 Fund Allocation
 
 | Area | Allocation (RM) | % of Total | Detail |
 |---|---|---|---|
-| **AI Model Development & Training** | 350,000 – 700,000 | 23% | Expand expert-labelled training dataset; improve supplement interaction detection accuracy; train and fine-tune AI summarisation models; develop chatbot NLP capabilities; ongoing model validation |
-| **Security Infrastructure** | 200,000 – 400,000 | 13% | ISO 27001 alignment; AES-256 encryption implementation; penetration testing (2 rounds); secure viewer development; RBAC system hardening; audit trail infrastructure |
-| **Product Development** | 300,000 – 600,000 | 20% | Full-stack platform development (mobile app, web portal, clinical dashboard); OCR digitisation pipeline; API gateway for third-party integration; multi-tenant architecture; quality assurance |
-| **Clinical Validation** | 200,000 – 400,000 | 13% | Multi-site pilot studies (UM Medical Centre + 3–5 partner clinics); clinician-led accuracy validation; UX research; clinical workflow efficiency measurement; research publication support |
-| **Regulatory Compliance** | 150,000 – 300,000 | 10% | PDPA compliance implementation; legal advisory; MDA pathway consultation; AI governance framework development; data protection officer (fractional); certification fees |
-| **Sales & Marketing** | 150,000 – 300,000 | 10% | B2B healthcare sales team (2–3 people, partial period); conference exhibition and sponsorship; digital marketing campaigns; sales collateral; partner development |
-| **Cloud Infrastructure** | 100,000 – 200,000 | 7% | AWS/GCP Malaysia region deployment; production environment setup; CI/CD pipeline; monitoring and observability; disaster recovery |
-| **Operations (Buffer)** | 50,000 – 100,000 | 4% | Legal entity setup; IP licensing fees to UM; accounting and administration; contingency |
-| **TOTAL** | **RM 1,500,000 – 3,000,000** | **100%** | |
+| **AI Model Development & Training** | 350,000 – 550,000 | 22–23% | Expand expert-labelled training dataset; improve supplement interaction detection accuracy; train and fine-tune AI summarisation models; develop chatbot NLP capabilities; ongoing model validation |
+| **Security Infrastructure** | 180,000 – 320,000 | 12–13% | ISO 27001 alignment; AES-256 encryption implementation; penetration testing (2 rounds); secure viewer development; RBAC system hardening; audit trail infrastructure |
+| **Product Development** | 280,000 – 500,000 | 19–20% | Full-stack platform development (mobile app, web portal, clinical dashboard); OCR digitisation pipeline; API gateway for third-party integration; multi-tenant architecture; quality assurance |
+| **Clinical Validation** | 180,000 – 350,000 | 12–14% | Multi-site pilot studies (UM Medical Centre + 3–5 partner clinics); clinician-led accuracy validation; UX research; clinical workflow efficiency measurement; research publication support |
+| **Regulatory Compliance** | 130,000 – 250,000 | 9–10% | PDPA compliance implementation; legal advisory; MDA pathway consultation; AI governance framework development; data protection officer (fractional); certification fees |
+| **Sales & Marketing** | 130,000 – 250,000 | 9–10% | B2B healthcare sales team (2–3 people, partial period); conference exhibition and sponsorship; digital marketing campaigns; sales collateral; partner development |
+| **Cloud Infrastructure** | 100,000 – 180,000 | 7% | AWS/GCP Malaysia region deployment; production environment setup; CI/CD pipeline; monitoring and observability; disaster recovery; startup cloud credits offset ~RM 50K–100K |
+| **Operations & Contingency** | 50,000 – 100,000 | 4% | Legal entity setup; IP licensing fees to UM; accounting and administration; buffer for unplanned costs |
+| **TOTAL** | **RM 1,500,000 – 2,500,000** | **100%** | |
 
-### 8.3 Strategic Partnership Needs
+### 8.3 Burn Rate & Runway
 
-| Partner Category | What We Seek | Value to Partner |
+Monthly burn varies by team size. Runway below assumes no revenue in Year 1 and modest revenue from pilot-to-paid conversions in Year 2.
+
+| Scenario | Team Size | Monthly Burn (Y1) | Runway on RM 1.5M | Runway on RM 2.0M |
+|---|---|---|---|---|
+| **Lean** | 5 (2 founders + 3 engineers) | RM 55,000 | 27 months | 36 months |
+| **Mid** | 8 (lean + 1 sales + 1 compliance + 1 QA) | RM 85,000 | 18 months | 24 months |
+| **Full** | 10–12 (mid + specialists) | RM 110,000 | 14 months | 18 months |
+
+**Recommendation:** Start lean (5-person team for Months 1–12); scale to 8 after pilot validation at Month 12. This stretches RM 1.5M to a 22-month runway, well past the break-even inflection point.
+
+### 8.4 5-Year Financial Projection
+
+| Metric | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+|---|---|---|---|---|---|
+| **Paying Accounts** | 0 (pilot) | 20 | 98 | 200 | 380 |
+| **ARR (RM)** | 0 | 150,000 | 800,000 | 1,800,000 | 3,500,000 |
+| **Gross Margin** | — | 60% | 65% | 68% | 72% |
+| **Net Margin** | Negative | Negative | ~5% | ~15% | ~22% |
+| **Cash-Flow Positive** | No | No | **Month 30–36** | Yes | Yes |
+| **Cumulative Funding Required** | RM 1.5M | RM 1.5M | — | — | — |
+
+**Key assumptions:** Annual contracts with auto-renewal; 90%+ gross renewal rate; sales cycles of 6–12 months; ARPU expansion of 5–8% per year as clinics upgrade from Essentials to Professional; AWS/GCP startup credits covering Year 1 infrastructure costs.
+
+### 8.5 Revenue Timing — Phased Growth
+
+```
+Year 1: RM 0          (Pilot — 0 paying accounts, 30 clinicians, 500 patients)
+Year 2: RM 0.15M ARR  (First revenue — 20 paying accounts)
+Year 3: RM 0.80M ARR  (Growth — 98 paying accounts, break-even achieved)
+Year 4: RM 1.80M ARR  (Scale — 200 accounts, ASEAN entry begins)
+Year 5: RM 3.50M ARR  (Regional — 380 accounts, 3 ASEAN markets)
+```
+
+### 8.6 Contingency Plan — Zero External Funding Scenario
+
+The business can survive and reach revenue without seed investment through a **3-path bootstrap strategy**. This is not a hypothetical — each path has specific, actionable steps.
+
+---
+
+**Path 1 — Grant-First (Primary Bootstrap Engine)**
+
+Malaysia has an active deep-tech grant ecosystem. Submitting to all eligible programmes simultaneously by Month 2 maximises the probability of at least one success.
+
+| Grant Provider | Programme | Typical Amount (RM) | Application Timeline | Fit |
+|---|---|---|---|---|
+| **CREST** | R&D & Commercialisation Grant | 200,000 – 500,000 | 3–6 months | MedTech is a CREST priority sector |
+| **MDEC** | GAH (Global Acceleration Hub) | 150,000 – 300,000 | 2–4 months | Digital health + regional expansion mandate |
+| **UMCIE** | UM Prototype Development Grant | 50,000 – 100,000 | 1–3 months | Internal UM grant; fastest turnaround |
+| **MIDA** | Domestic Investment Strategic Fund | 500,000 – 1,000,000 | 6–12 months | Larger grant; fits post-pilot scale-up |
+| **MTDC** | Technology Commercialisation Fund | 500,000 – 1,500,000 | 6–9 months | Matches the "lab-to-market" mandate exactly |
+
+**Grant Strategy:** Apply to all 5 in parallel by Month 2. Even 2 successes — e.g., UMCIE (RM 75K) + MDEC GAH (RM 200K) — provide RM 275K bridge funding. Add CREST (RM 300K) and cumulative grant funding reaches RM 575K — enough for a lean team to reach pilot validation and first paying customers.
+
+---
+
+**Path 2 — Partner-Funded Development (Sell Before You Build)**
+
+Rather than building the full platform and then selling, secure pre-commitments from pilot partners that fund development directly.
+
+| Partner Category | Target Partner | Pre-Commitment Model | Estimated Value (RM) |
+|---|---|---|---|
+| **Private clinic group** | KPJ Healthcare / Columbia Asia | Co-fund a custom pilot at 3–5 branches; partner pays RM 30–60K for development and receives 12 months free platform access + input into product design | 30,000 – 60,000 |
+| **Telemedicine platform** | DoctorOnCall / Doctor Anywhere MY | Co-fund API integration; partner pays RM 40–50K for custom integration and receives 18 months exclusive API access at discounted rate | 40,000 – 50,000 |
+| **UM Medical Centre** | In-kind contribution | Provide clinical resources, validation data, clinician time, and research facilities (in-kind, valued at RM 100K+) | 100,000+ (in-kind) |
+| **Supplement manufacturer** | Blackmores / Kordel's | Sponsor the Malaysian supplement product database build-out; contribution of product data + RM 20–30K | 20,000 – 30,000 |
+
+**Partner Strategy:** Secure 2 of the above 4 by Month 6. Target total partner contributions: RM 80–150K. Combined with even one grant, this funds the lean team through pilot phase.
+
+---
+
+**Path 3 — Self-Funded Lean MVP (Zero External Capital)**
+
+If both grants and partners fall through, the platform can still reach MVP stage using university resources and startup cloud programmes.
+
+| Resource | Source | Value (RM) |
 |---|---|---|
-| **Healthcare Providers** (private clinics, hospital groups) | Pilot deployment sites; clinical validation data; clinician feedback; reference customers | Access to AI-powered clinical workflow tools; improved patient safety (supplement interaction detection); differentiation in competitive healthcare market |
-| **Telemedicine Companies** (DoctorOnCall, Doctor Anywhere MY, etc.) | API integration partnership; distribution to their clinic/patient network; co-marketing | Enhanced platform value with supplement intelligence and secure records; competitive differentiation; increased consultation quality |
-| **Insurance Companies** (AIA, Prudential, Great Eastern) | Wellness product co-development; corporate wellness distribution; actuarial data partnership | Data-driven preventive health product design; reduced claims through early risk detection; differentiated wellness offerings for corporate clients |
-| **Supplement Industry** (Blackmores, BioLife, Kordel's, Malaysian Supplement Manufacturers) | Product database and ingredient information; co-branded patient education; potential sponsorship of research | Science-backed product positioning; direct channel to healthcare providers and patients; adverse interaction avoidance (brand protection) |
-| **Government Agencies** (MOH Digital Health Division, MDEC, MIDA, CREST) | Regulatory pathway guidance; grant co-funding; national EMR integration pathway; GAH support for regional expansion | Alignment with national digital health strategy; Malaysian IP commercialisation success story; regional health-tech export |
-| **University & Research** (UM, UKM, USM, IMU, clinical research organisations) | Multi-site clinical validation; research partnerships; expert advisory panel; talent pipeline | Publication opportunities; research funding access; teaching/training platform for medical and pharmacy students |
+| **Cloud infrastructure (12 months)** | AWS Activate / Azure for Startups / GCP for Startups | 50,000 – 100,000 (credits) |
+| **Research assistants (2–3)** | UM postgraduate students via faculty collaboration | 60,000 – 90,000 (equivalent salary saved) |
+| **University infrastructure** | UM servers, lab space, software licenses, existing research codebase | 30,000 – 50,000 (saved) |
+| **IP inventor involvement** | Dr. Lee Ching Shya, Dr. Nurul Fauzani Jamaluddin — knowledge transfer and advisory | Invaluable |
+| **Open-source stack** | React, Python/FastAPI, PostgreSQL, TensorFlow/PyTorch — zero license cost | 0 |
+| **Founder sweat equity** | 2 co-founders working full-time, drawing minimal stipend (RM 3,000/month each) | — |
 
-### 8.4 Investment Proposition Summary
+**Self-Funded Burn Rate:** RM 8,000 – 12,000/month (2 founders at subsistence + cloud costs mostly covered by credits).
+**Self-Funded Timeline:** MVP (supplement survey + basic alerts) in 6–9 months; pilot at UM Medical Centre by Month 9; first paying customer by Month 15–18.
+
+**Total resources accessible at zero external capital:** ~RM 240,000+ in credits, in-kind contributions, and saved costs — equivalent to a small seed round but requiring 12–18 months instead of 6–9 months to reach revenue.
+
+---
+
+### 8.7 Combined Contingency Timeline (No Seed Funding)
+
+```
+Month 1–3          Month 3–6          Month 6–9         Month 9–12        Month 12–18
+─────────────────────────────────────────────────────────────────────────────────────
+Submit to 5        First grant        Build core MVP    Pilot at UM       First paying
+grant programmes   results arrive     (supplement       Medical Centre    customer
+                   (UMCIE + MDEC)     survey + basic    + 1 partner       (RM 350/mo)
+Begin partner      Secure 2 partner   AI alerts)        clinic            Grant funding
+negotiations       pre-commitments    Lean team of 3                       sustains ops
+                   (RM 80–150K)       (2 founders                          Apply for
+                                      + 1 RA)                              CREST/MTDC
+                                      Cumulative funds:                    for scale-up
+                                      RM 200–400K
+```
+
+**Expected Outcome (Bootstrap Path):** Revenue-generating by Month 15–18 with RM 200–500K total grant funding consumed. Slower than the funded path but viable. Year 3 ARR target reduced to **RM 400–500K** (vs RM 780K funded) due to reduced sales and marketing capacity.
+
+---
+
+### 8.8 Funded vs Bootstrap — Scenario Comparison
+
+| Metric | Funded Path (RM 1.5M Seed) | Bootstrap Path |
+|---|---|---|
+| **First revenue** | Month 18 | Month 18–24 |
+| **Break-even** | Month 30–36 (Year 3) | Month 36–42 (Year 3–4) |
+| **Year 3 ARR** | RM 780K | RM 450K |
+| **Year 5 ARR** | RM 3.5M | RM 1.8M |
+| **Team size (Year 1)** | 5–8 (full-time) | 2–3 (mixed full/part-time) |
+| **Primary risk** | Investor dilution (15–25%) | Founder burnout; slower execution |
+| **Primary advantage** | Speed to market; competitive moat | Zero dilution; full founder control |
+| **Key gating factor** | Convincing 1–2 angel/VC investors | Winning 1–2 grants + 1 partner pre-commitment |
+
+**Conclusion:** Healynx is viable on both paths. The seed-funded path accelerates market entry by 6–12 months and increases Year 5 revenue by ~2x. The bootstrap path preserves equity and is achievable with Malaysia's grant ecosystem and UM's infrastructure — but requires exceptional founder discipline over 18–24 months.
+
+---
+
+### 8.9 Strategic Partnership Needs
+
+No change from the partnership needs outlined earlier. Every partner category (healthcare providers, telemedicine platforms, insurers, supplement manufacturers, government agencies, and universities) is a target for both the funded and bootstrap paths.
+
+---
+
+### 8.10 Investment Proposition Summary
 
 | Proposition | Supporting Evidence |
 |---|---|
 | **Large, Growing Market** | RM 1.75B TAM in Malaysia alone; expansion into ASEAN (670M population); driven by supplement consumption growth, digital health expansion, and chronic disease burden |
 | **Strong Differentiation** | Only platform combining AI supplement intelligence + secure medical records + preventive healthcare analytics; protected by two UM patents; expert-validated AI trained on Malaysian data |
-| **Scalable SaaS Model** | >75% recurring revenue; 65–75% gross margins; low marginal expansion cost; multi-tenant, multi-region cloud architecture |
+| **Scalable SaaS Model** | >75% recurring revenue at steady state; 65–75% gross margins at scale; low marginal expansion cost; multi-tenant, multi-region cloud architecture |
 | **Defensible Competitive Moat** | Dual patent protection; proprietary expert-labelled training dataset; Malaysian supplement product database; regulatory first-mover compliance; data network effects; high switching costs |
+| **Financially Realistic** | Break-even at Month 30–36; lean team conserves capital; grant and partner pre-commitment paths exist as contingency; startup cloud credits reduce Year 1 infra costs by ~RM 75K |
 | **Regional Expansion Potential** | Cloud-native architecture enables ASEAN deployment without re-platforming; five-country roadmap over 5 years; language localisation strategy; regulatory pathway per market |
 | **UM Backing** | Technology from Malaysia's top university; TRL 5 (ready for commercial validation); inventor involvement (Dr. Lee, Dr. Nurul — both RTTP-certified); UMCIE technology transfer support |
-| **Capital Efficiency** | RM 1.5M–3M funds 24-month path to revenue; lean cloud-native stack; focused go-to-market (clinic → telemedicine → corporate → insurance — sequential, not simultaneous) |
+| **Capital Efficiency with Contingency** | RM 1.5M–2.5M funds 24-month path to revenue; if unsecured, RM 200–500K in grants + partner pre-commitments achieves the same outcome 6–12 months later |
 | **Societal Impact** | Reduces adverse drug-supplement interactions; improves chronic disease management; enables preventive healthcare at scale; builds Malaysian AI healthcare IP for the region |
 
 ---
