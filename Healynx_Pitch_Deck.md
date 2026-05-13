@@ -162,6 +162,20 @@ Targeting penetration of the SAM through direct B2B sales, channel partnerships,
 | Supplement risks go undetected until adverse events occur | Real-time, expert-validated AI flags interaction risks at point of care | Supplement interaction databases are Western-centric; no Malaysian-validated AI |
 | Preventive healthcare is episodic and reactive | Continuous, data-driven preventive monitoring with personalised recommendations | Preventive health tools are fragmented across apps with no clinical integration |
 
+### 2.5 The Pain Score
+
+*Rating Healynx's target problem across 5 dimensions (Scale 1–5)*
+
+| Dimension | Score | Justification |
+|---|---|---|
+| **Frequency** | **4** | 60% of GP caseload is chronic disease; patients routinely fail to disclose supplements at every visit; record review is a daily friction point for every clinician. |
+| **Intensity** | **5** | Drug-supplement interactions can cause hospitalisation, organ damage, or death. Undocumented supplement use creates medico-legal liability for clinicians. |
+| **Cost** | **4** | Clinicians waste 15–20% of consult time on manual record review. Clinics spend days preparing for audits. Incomplete telemedicine consults require costly follow-ups. |
+| **Urgency** | **4** | Chronic disease burden is rising; digital health mandates are active; supplement consumption is accelerating. No existing Malaysian solution addresses the gap — first-mover window is open. |
+| **Reachability** | **4** | Buyers are identifiable and accessible: private clinics via medical associations, telemedicine platforms via direct B2B, corporates via HR/insurance channels, all concentrated in Klang Valley, Penang, Johor Bahru. |
+
+**Composite Pain Score: 4.2 / 5** — A severe, frequent, costly problem with reachable buyers and no existing solution.
+
 **Judging Criteria Alignment — Problem Clarity (20%) & Market Opportunity (20%):** The problem is specific, documented, and acute. The market is large, growing, and structurally under-served by existing solutions.
 
 ---
@@ -389,6 +403,20 @@ Healthcare SaaS economics shift significantly from pre-revenue to growth to stea
 | **Government** | MOH Digital Health Division / MDEC | Regulatory pathway guidance; GAH (Global Acceleration Hub) support |
 | **Research** | UM Faculty of Medicine, IMU | Clinical validation studies; publication; expert advisory panel |
 
+### 5.5 Buyer Decision Chain
+
+*Who signs, who recommends, who influences, and who blocks — by segment*
+
+| Segment | Signer (PO) | Recommender | Influencer | Blocker |
+|---|---|---|---|---|
+| **Private Clinic** | Clinic Owner / Managing GP | Senior Doctor / Medical Director | Peer clinicians, Malaysian Medical Association (MMA) | IT lead (integration burden); compliance officer (PDPA concerns) |
+| **Multi-Branch Clinic Group** | CEO / COO | Clinical Informatics Lead | Heads of Department (HODs), nursing leadership | CIO (vendor security assessment); procurement (long vendor cycles) |
+| **Telemedicine Platform** | CTO / CPO | Product Lead / Clinical Operations Lead | Consultant network; partner clinics requesting the feature | CISO (security penetration test); legal (data processing agreement terms) |
+| **Corporate Wellness** | HR Director / CFO | Wellness Program Manager | Insurance broker; employee feedback from pilot | IT procurement (vendor assessment); legal (employee data privacy) |
+| **Insurance Company** | Chief Product Officer / Head of Health | Actuarial / Underwriting Lead | Reinsurer requirements; regulatory compliance team | CISO; legal (data sharing agreement); actuarial (model validation) |
+
+**Sales Implication:** The decision chain is multi-stakeholder for every segment. B2B sales must address the Clinician (will this help my patients?), the Operator (will this integrate with my workflow?), the Compliance Officer (is this PDPA-ready?), and the Payer (what's the ROI?). Pilot deployments must generate evidence for all four stakeholders simultaneously.
+
 ---
 
 ## 6. Competitive Landscape
@@ -487,7 +515,66 @@ The platform is architected for **cloud-native, multi-region, multi-language** d
 
 ---
 
-## 8. The Ask & Financial Model
+## 8. Market Fit Evaluation Canvas
+
+*Score across 6 dimensions (Scale 1–5) — adapted from Workshop 1 framework*
+
+| Dimension | Score | Rationale |
+|---|---|---|
+| **1. Problem Severity** | **4** | Causes financial loss (wasted clinician time, audit costs), health risk (adverse drug-supplement interactions), and operational failure (incomplete telemedicine, compliance gaps). |
+| **2. Market Size** | **4** | TAM RM 1.75B (Malaysia), SAM RM 350M (urban clinics). Multiple paying segments: clinics, telemedicine, corporate wellness, insurance. Strong ASEAN expansion pathway (670M population). |
+| **3. Tech Readiness** | **3** | TRL 3 (Supplement IP) and TRL 5 (Medical Records IP). Combined TRL 5 with defined pathway to TRL 7 in 18 months. Years of development still ahead, but starting from working research-grade systems, not a concept. |
+| **4. Competition Landscape** | **4** | No competitor combines AI supplement intelligence + secure records + preventive analytics in Malaysia. Traditional EMRs lack AI. Telemedicine platforms lack records. Health apps lack clinical integration. The gap is structural, not incremental. |
+| **5. Team Domain Fit** | **3** | Five UM CS sophomores with hackathon shipping experience — the right technical foundation for an AI + cloud platform. University-insider access to the IP inventors, UMCIE, and UM Medical Centre. Healthcare domain depth and commercial experience supplemented by advisors. |
+| **6. Unfair Advantage** | **4** | Dual UM patent protection; proprietary expert-labelled Malaysian supplement dataset (years to replicate); regulatory first-mover (PDPA, ISO 27001); data network effects; high switching costs from integrated records + AI. |
+
+**Composite Canvas Score: 3.7 / 5** — Strong market fit with technology readiness as the primary risk factor, which the phased roadmap directly addresses.
+
+---
+
+## 9. Team Domain Fit
+
+*Five Universiti Malaya computer science students building the engineering core of Healynx, backed by the inventors of both underlying IPs.*
+
+### Core Team
+
+| Name | Role |
+|---|---|
+| **Saiket Das** | Co-Founder |
+| **Irtiza Aziz** | Co-Founder |
+| **Khan Safwan Hasan** | Co-Founder |
+| **Saif Abdullah** | Co-Founder |
+| **Md Musa Al Kafi** | Co-Founder |
+
+### What We Bring
+
+| Strength | Why It Matters for Healynx |
+|---|---|
+| **Computer Science Foundation** | The Healynx stack — AI/ML models, cloud infrastructure, full-stack web and mobile — is fundamentally a computer science problem. Our coursework in algorithms, machine learning, databases, and software engineering maps directly to the platform architecture. |
+| **Hackathon-Proven Builders** | Multiple competitive hackathons mean we ship under pressure. We've built functional prototypes from scratch in 24-48 hours across web, mobile, and AI — the same speed and versatility Healynx's phased build demands. |
+| **Inside UM Ecosystem** | We are embedded in the same university that owns the IP, employs the inventors, and operates UM Medical Centre — the pilot site. No external team can match our physical proximity to the technology, the researchers, and the first deployment venue. |
+
+### Key Advisors & IP Inventors
+
+| Name | Role | Credentials |
+|---|---|---|
+| **Dr. Lee Ching Shya** | IP Inventor (UI 2025002953) | Registered Technology Transfer Professional (RTTP); Universiti Malaya |
+| **Dr. Nurul Fauzani Jamaluddin** | IP Inventor (PI 2025007955) | Registered Technology Transfer Professional (RTTP); Universiti Malaya |
+
+### Advisors (To Be Confirmed)
+
+| Role | Gap We Fill |
+|---|---|
+| Clinical Advisor | Validates AI accuracy against real patient cases; guides workflow integration at UM Medical Centre |
+| Commercial Advisor | Guides B2B healthcare sales strategy; opens clinic and telemedicine partner doors |
+
+### Score: 3 / 5
+
+*We are early-stage builders with the right technical foundation and unmatched university access. Domain depth comes from our IP inventors and advisors. Commercial experience is the growth edge we will close through the phased roadmap and advisor appointments.*
+
+---
+
+## 10. The Ask & Financial Model
 
 ### 8.1 Funding Requirement
 
@@ -666,9 +753,9 @@ No change from the partnership needs outlined earlier. Every partner category (h
 |---|---|---|---|
 | **Application of UM IP** | 25% | Section 1 (The Selected IP), Section 3 (Commercialisation) | Both IPs are core architectural components; integration is structural, not cosmetic; IP licensing pathway through UMCIE is defined |
 | **Solution Feasibility** | 25% | Section 3 (Commercialisation), Section 4 (Business Model) | Phased TRL progression (5→7); detailed regulatory pathway; realistic cost structure; cloud-native scalable architecture; clinical validation plan |
-| **Problem Clarity** | 20% | Section 2 (Market Opportunity — Problem Being Solved) | Specific, documented problem (undisclosed supplement use, fragmented records, no AI preventive health); four-part demand gap analysis |
-| **Market Opportunity** | 20% | Section 2 (Market Opportunity), Section 5 (GTM), Section 7 (Scaling) | Quantified TAM/SAM/SOM; defined personas; five market drivers; ASEAN expansion roadmap |
-| **Team Execution & Pitch** | 10% | Section 5 (GTM), Section 8 (The Ask) | Clear, measurable KPIs by phase; specific partner targets; persuasive narrative arc from problem → solution → market → growth |
+| **Problem Clarity** | 20% | Section 2 (Market Opportunity — Problem Being Solved, Pain Score 2.5) | Specific, documented problem; five-dimension Pain Score (4.2/5); four-part demand gap analysis |
+| **Market Opportunity** | 20% | Section 2 (Market Opportunity), Section 5 (GTM, incl. Decision Chain 5.5), Section 7 (Scaling) | Quantified TAM/SAM/SOM; defined personas; decision chain mapped per segment; five market drivers; ASEAN expansion roadmap |
+| **Team Execution & Pitch** | 10% | Section 5 (GTM), Section 8 (Market Fit Canvas), Section 9 (Team), Section 10 (The Ask) | Six-dimension market fit canvas (3.7/5); 5-member UM CS founding team; clear measurable KPIs by phase; persuasive narrative arc from problem → solution → market → growth |
 
 ---
 
