@@ -3,9 +3,10 @@
 You are building the **doctor and clinic admin desktop web app** for Healynx. Primary canvas: **1440px**. Minimum: **1024px**. This is a desktop-first professional dashboard for clinical use.
 
 **Tech stack (fixed — no additions):**
+
 - Next.js 14 (App Router) + React 18 + TypeScript
 - Tailwind CSS 3.x with CSS custom properties
-- Radix UI: Dialog, Select, Tabs, Switch, Checkbox, Tooltip, Popover
+- Shadcn UI
 - TanStack Query 5.x, Zustand 4.x, Recharts 2.x, Lucide React
 - React Hook Form + Zod
 - `fetch` only. `Intl.DateTimeFormat`.
@@ -18,30 +19,73 @@ Same token system as patient app. Copy these into `app/globals.css` under `:root
 
 ```css
 :root {
-  --nv-primary-900:#0D3B3B;--nv-primary-800:#125C5C;--nv-primary-700:#1A7A7A;--nv-primary-600:#1E8C8C;
-  --nv-primary-500:#26A6A6;--nv-primary-400:#3DBEBE;--nv-primary-300:#6ED4D4;--nv-primary-200:#A3E5E5;
-  --nv-primary-100:#D4F3F3;--nv-primary-050:#EDFAFA;
-  --nv-secondary-700:#1E4D8C;--nv-secondary-600:#2563B8;--nv-secondary-500:#3B82D9;
-  --nv-secondary-300:#7EB3F0;--nv-secondary-100:#DCE9FA;--nv-secondary-050:#F0F5FD;
-  --nv-accent-700:#8C5C1E;--nv-accent-600:#D98C2E;--nv-accent-500:#EDA83E;--nv-accent-100:#FCF0DA;--nv-accent-050:#FEF9F2;
-  --nv-success-600:#2D8C4A;--nv-success-100:#D9F2E2;
-  --nv-danger-700:#8C1A1A;--nv-danger-600:#D92D2D;--nv-danger-500:#E84A4A;--nv-danger-100:#FCE0E0;--nv-danger-050:#FEF5F5;
-  --nv-info-600:#3B82D9;--nv-info-100:#DCE9FA;
-  --nv-neutral-900:#111827;--nv-neutral-800:#1F2937;--nv-neutral-750:#283040;--nv-neutral-700:#374151;
-  --nv-neutral-600:#4B5563;--nv-neutral-500:#6B7280;--nv-neutral-400:#9CA3AF;--nv-neutral-300:#D1D5DB;
-  --nv-neutral-200:#E5E7EB;--nv-neutral-150:#EEF0F3;--nv-neutral-100:#F3F4F6;--nv-neutral-050:#F9FAFB;--nv-neutral-000:#FFFFFF;
-  --nv-shadow-sm:0 1px 3px rgba(0,0,0,0.08);--nv-shadow-md:0 4px 6px -1px rgba(0,0,0,0.08);
-  --nv-shadow-lg:0 10px 15px -3px rgba(0,0,0,0.08);--nv-shadow-focus:0 0 0 3px rgba(30,140,140,0.25);
-  --nv-shadow-focus-danger:0 0 0 3px rgba(217,45,45,0.25);
+  --nv-primary-900: #0d3b3b;
+  --nv-primary-800: #125c5c;
+  --nv-primary-700: #1a7a7a;
+  --nv-primary-600: #1e8c8c;
+  --nv-primary-500: #26a6a6;
+  --nv-primary-400: #3dbebe;
+  --nv-primary-300: #6ed4d4;
+  --nv-primary-200: #a3e5e5;
+  --nv-primary-100: #d4f3f3;
+  --nv-primary-050: #edfafa;
+  --nv-secondary-700: #1e4d8c;
+  --nv-secondary-600: #2563b8;
+  --nv-secondary-500: #3b82d9;
+  --nv-secondary-300: #7eb3f0;
+  --nv-secondary-100: #dce9fa;
+  --nv-secondary-050: #f0f5fd;
+  --nv-accent-700: #8c5c1e;
+  --nv-accent-600: #d98c2e;
+  --nv-accent-500: #eda83e;
+  --nv-accent-100: #fcf0da;
+  --nv-accent-050: #fef9f2;
+  --nv-success-600: #2d8c4a;
+  --nv-success-100: #d9f2e2;
+  --nv-danger-700: #8c1a1a;
+  --nv-danger-600: #d92d2d;
+  --nv-danger-500: #e84a4a;
+  --nv-danger-100: #fce0e0;
+  --nv-danger-050: #fef5f5;
+  --nv-info-600: #3b82d9;
+  --nv-info-100: #dce9fa;
+  --nv-neutral-900: #111827;
+  --nv-neutral-800: #1f2937;
+  --nv-neutral-750: #283040;
+  --nv-neutral-700: #374151;
+  --nv-neutral-600: #4b5563;
+  --nv-neutral-500: #6b7280;
+  --nv-neutral-400: #9ca3af;
+  --nv-neutral-300: #d1d5db;
+  --nv-neutral-200: #e5e7eb;
+  --nv-neutral-150: #eef0f3;
+  --nv-neutral-100: #f3f4f6;
+  --nv-neutral-050: #f9fafb;
+  --nv-neutral-000: #ffffff;
+  --nv-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --nv-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --nv-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --nv-shadow-focus: 0 0 0 3px rgba(30, 140, 140, 0.25);
+  --nv-shadow-focus-danger: 0 0 0 3px rgba(217, 45, 45, 0.25);
 }
 ```
 
 **Dark mode (doctor default):** Copy these under `[data-theme="dark"]`:
+
 ```css
 [data-theme="dark"] {
-  --nv-neutral-900:#F9FAFB;--nv-neutral-800:#F3F4F6;--nv-neutral-700:#D1D5DB;--nv-neutral-600:#9CA3AF;
-  --nv-neutral-500:#6B7280;--nv-neutral-400:#4B5563;--nv-neutral-300:#374151;--nv-neutral-200:#1F2937;
-  --nv-neutral-150:#1F2937;--nv-neutral-100:#111827;--nv-neutral-050:#0F172A;--nv-neutral-000:#1F2937;
+  --nv-neutral-900: #f9fafb;
+  --nv-neutral-800: #f3f4f6;
+  --nv-neutral-700: #d1d5db;
+  --nv-neutral-600: #9ca3af;
+  --nv-neutral-500: #6b7280;
+  --nv-neutral-400: #4b5563;
+  --nv-neutral-300: #374151;
+  --nv-neutral-200: #1f2937;
+  --nv-neutral-150: #1f2937;
+  --nv-neutral-100: #111827;
+  --nv-neutral-050: #0f172a;
+  --nv-neutral-000: #1f2937;
 }
 ```
 
@@ -58,6 +102,7 @@ Desktop (1024px+): 12-column grid, 24px gutters, max-width 1280px centred.
 **Navigation:** Persistent sidebar (256px wide, collapsible to 64px icons-only). Background: `neutral-050` light / `neutral-900` dark.
 
 Sidebar structure:
+
 - Top: Healynx logo + name
 - Nav items (48px height each, icon 20px + label body-sm): Dashboard 🏠, Patients 👥, Alerts ⚠ (with count badge), AI Chatbot 🤖, Emergency Access 🔒, Reports 📊, Settings ⚙
 - Bottom: Doctor avatar + name + role + [Logout]
@@ -124,7 +169,7 @@ mock/
 
 ```tsx
 interface SidebarProps {
-  role: 'doctor' | 'admin';
+  role: "doctor" | "admin";
   collapsed: boolean;
   onToggle: () => void;
 }
@@ -138,8 +183,23 @@ Width: 256px → 64px on collapse (icons only, no labels). Transition: 200ms. Us
 ### 4.2 Data Table
 
 ```tsx
-interface Column<T> { key: string; header: string; sortable?: boolean; render: (row: T) => React.ReactNode }
-interface DataTableProps<T> { columns: Column<T>[]; data: T[]; onRowClick?: (row: T) => void; pagination?: { page: number; total: number; perPage: number; onPageChange: (p: number) => void } }
+interface Column<T> {
+  key: string;
+  header: string;
+  sortable?: boolean;
+  render: (row: T) => React.ReactNode;
+}
+interface DataTableProps<T> {
+  columns: Column<T>[];
+  data: T[];
+  onRowClick?: (row: T) => void;
+  pagination?: {
+    page: number;
+    total: number;
+    perPage: number;
+    onPageChange: (p: number) => void;
+  };
+}
 ```
 
 Header: `neutral-100` bg, 13px semibold uppercase. Sortable: ▲▼ icons. Row: 52px height, 0.5px bottom border `neutral-200`. Hover: `neutral-050`. Selected: `primary-050`. Pagination: "← 1 2 3 →" + per-page selector.
@@ -157,7 +217,12 @@ Variants: info=`bg-nv-info-100 border-l-4 border-nv-info-600`, warning=`bg-nv-ac
 ### 4.5 Emergency Banner
 
 ```tsx
-interface EmergencyBannerProps { patientName: string; reason: string; remainingSeconds: number; onEnd: () => void }
+interface EmergencyBannerProps {
+  patientName: string;
+  reason: string;
+  remainingSeconds: number;
+  onEnd: () => void;
+}
 ```
 
 Full-width sticky top (z-50). `bg-nv-danger-700 text-white`. Content: 🔴 "EMERGENCY ACCESS ACTIVE — ALL ACTIONS LOGGED" + ⏱ countdown timer (monospace) + patient name + reason + [End Emergency Access] button. Timer decrements every second. Non-dismissible. On expiry or end: banner disappears, toast.
@@ -179,7 +244,11 @@ Access timer bar at top. "View-only" warning text. [Request Extension] link. 15-
 ### 4.8 Chatbot Panel
 
 ```tsx
-interface ChatbotPanelProps { patientId?: string; isOpen: boolean; onClose: () => void }
+interface ChatbotPanelProps {
+  patientId?: string;
+  isOpen: boolean;
+  onClose: () => void;
+}
 ```
 
 Side panel, right 30% width, resizable. Header: 🤖 + "AI Clinical Assistant" + close. Messages: user (right, `primary-600` bg, white text) / AI (left, `secondary-050` bg, dark text). AI messages: sparkle icon + answer + source citations (body-sm, `neutral-500`) + disclaimer "AI-generated. Verify clinically." + model version.
@@ -221,27 +290,59 @@ Second row: Priority Alerts (8 columns, sorted by severity, red pulse on new) + 
 Third row: Patient List (full-width DataTable). Columns: Patient (name), Score (WellnessGauge compact), Alerts (count badge coloured by highest severity), Last Visit, AI Summary (one-line sparkle snippet). Sortable, filterable, searchable, paginated (50/page).
 
 ```tsx
-'use client';
-import { useDoctorDashboard } from '@/hooks/use-doctor-dashboard';
-import { DataTable } from '@/components/ui/data-table';
-import { WellnessGauge } from '@/components/ui/wellness-gauge';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Skeleton } from '@/components/ui/loading';
+"use client";
+import { useDoctorDashboard } from "@/hooks/use-doctor-dashboard";
+import { DataTable } from "@/components/ui/data-table";
+import { WellnessGauge } from "@/components/ui/wellness-gauge";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/loading";
 
 export default function DoctorDashboard() {
   const { data, isLoading } = useDoctorDashboard();
 
   const columns = [
-    { key: 'name', header: 'Patient', render: (r) => <span className="font-semibold">{r.full_name}</span> },
-    { key: 'score', header: 'Score', render: (r) => <WellnessGauge score={r.wellness_score} previousScore={r.wellness_score_prev} compact /> },
-    { key: 'alerts', header: 'Alerts', render: (r) => {
-      if (r.alert_count.high > 0) return <Badge color="red">{r.alert_count.high} high</Badge>;
-      if (r.alert_count.moderate > 0) return <Badge color="amber">{r.alert_count.moderate} moderate</Badge>;
-      return <Badge color="green">0</Badge>;
-    }},
-    { key: 'last_visit', header: 'Last Visit', render: (r) => r.last_visit_date ?? '—' },
-    { key: 'summary', header: 'AI Summary', render: (r) => <span className="text-sm text-nv-neutral-600">✦ {r.ai_summary_line}</span> },
+    {
+      key: "name",
+      header: "Patient",
+      render: (r) => <span className="font-semibold">{r.full_name}</span>,
+    },
+    {
+      key: "score",
+      header: "Score",
+      render: (r) => (
+        <WellnessGauge
+          score={r.wellness_score}
+          previousScore={r.wellness_score_prev}
+          compact
+        />
+      ),
+    },
+    {
+      key: "alerts",
+      header: "Alerts",
+      render: (r) => {
+        if (r.alert_count.high > 0)
+          return <Badge color="red">{r.alert_count.high} high</Badge>;
+        if (r.alert_count.moderate > 0)
+          return <Badge color="amber">{r.alert_count.moderate} moderate</Badge>;
+        return <Badge color="green">0</Badge>;
+      },
+    },
+    {
+      key: "last_visit",
+      header: "Last Visit",
+      render: (r) => r.last_visit_date ?? "—",
+    },
+    {
+      key: "summary",
+      header: "AI Summary",
+      render: (r) => (
+        <span className="text-sm text-nv-neutral-600">
+          ✦ {r.ai_summary_line}
+        </span>
+      ),
+    },
   ];
 
   return (
@@ -255,7 +356,17 @@ export default function DoctorDashboard() {
       </div>
       {/* Patient List */}
       <Card>
-        <DataTable columns={columns} data={data?.patients ?? []} onRowClick={(row) => router.push(`/patients/${row.id}`)} pagination={{ page: 1, total: 247, perPage: 50, onPageChange: () => {} }} />
+        <DataTable
+          columns={columns}
+          data={data?.patients ?? []}
+          onRowClick={(row) => router.push(`/patients/${row.id}`)}
+          pagination={{
+            page: 1,
+            total: 247,
+            perPage: 50,
+            onPageChange: () => {},
+          }}
+        />
       </Card>
     </div>
   );
@@ -341,10 +452,20 @@ export default function PatientDetail({ params }: { params: { patientId: string 
 ```ts
 // stores/emergency-store.ts
 interface EmergencyState {
-  isActive: boolean; sessionId: string | null; patientId: string | null;
-  patientName: string | null; reason: string | null; remainingSeconds: number;
-  activate: (data: { sessionId: string; patientId: string; patientName: string; reason: string }) => void;
-  deactivate: () => void; tick: () => void;
+  isActive: boolean;
+  sessionId: string | null;
+  patientId: string | null;
+  patientName: string | null;
+  reason: string | null;
+  remainingSeconds: number;
+  activate: (data: {
+    sessionId: string;
+    patientId: string;
+    patientName: string;
+    reason: string;
+  }) => void;
+  deactivate: () => void;
+  tick: () => void;
 }
 ```
 
@@ -355,6 +476,7 @@ interface EmergencyState {
 No sidebar, no top bar — minimal chrome. Dark surround. Persistent AccessTimerBar. Watermark overlay. Document content rendered as image/canvas (not downloadable). Anti-copy enforced. "View-only" warning. [Request Extension] link.
 
 **States:**
+
 - Valid: document visible, timer counting
 - Expired: "Access expired. Contact owner." + [Request Extension]
 - Revoked: "Access revoked by owner."
@@ -379,41 +501,138 @@ No sidebar, no top bar — minimal chrome. Dark surround. Persistent AccessTimer
 
 ```ts
 export const MOCK_DOCTOR_DASHBOARD = {
-  stats: { total_patients: 247, pending_reviews: 12, active_alerts: { high: 3, moderate: 8, low: 156 } },
+  stats: {
+    total_patients: 247,
+    pending_reviews: 12,
+    active_alerts: { high: 3, moderate: 8, low: 156 },
+  },
   priority_alerts: [
-    { id: 'alt-1', patient_id: 'pat-001', patient_name: 'Rajan a/l Kumar', alert_type: 'high_severity_interaction', severity: 'high' as const, message: 'Jamu Herbal + Metformin: Hepatotoxic risk. STOP immediately.', generated_at: '2026-09-16T10:30:03+08:00' },
-    { id: 'alt-2', patient_id: 'pat-003', patient_name: 'Ahmad bin Ismail', alert_type: 'high_severity_interaction', severity: 'high' as const, message: 'Supplement X + Warfarin: Bleeding risk.', generated_at: '2026-09-12T14:00:00+08:00' },
-    { id: 'alt-3', patient_id: 'pat-002', patient_name: 'Priya d/o Ravi', alert_type: 'wellness_score_drop', severity: 'moderate' as const, message: 'Wellness score dropped 18 points.', generated_at: '2026-09-14T09:00:00+08:00' },
+    {
+      id: "alt-1",
+      patient_id: "pat-001",
+      patient_name: "Rajan a/l Kumar",
+      alert_type: "high_severity_interaction",
+      severity: "high" as const,
+      message: "Jamu Herbal + Metformin: Hepatotoxic risk. STOP immediately.",
+      generated_at: "2026-09-16T10:30:03+08:00",
+    },
+    {
+      id: "alt-2",
+      patient_id: "pat-003",
+      patient_name: "Ahmad bin Ismail",
+      alert_type: "high_severity_interaction",
+      severity: "high" as const,
+      message: "Supplement X + Warfarin: Bleeding risk.",
+      generated_at: "2026-09-12T14:00:00+08:00",
+    },
+    {
+      id: "alt-3",
+      patient_id: "pat-002",
+      patient_name: "Priya d/o Ravi",
+      alert_type: "wellness_score_drop",
+      severity: "moderate" as const,
+      message: "Wellness score dropped 18 points.",
+      generated_at: "2026-09-14T09:00:00+08:00",
+    },
   ],
   patients: [
-    { id: 'pat-001', full_name: 'Rajan a/l Kumar', age: 58, last_visit_date: '2026-09-15', wellness_score: 72, wellness_score_prev: 58, alert_count: { high: 2, moderate: 0, low: 0 }, ai_summary_line: 'DM2, HTN, 3 supplements — 1 high-risk interaction' },
-    { id: 'pat-002', full_name: 'Priya d/o Ravi', age: 34, last_visit_date: '2026-09-14', wellness_score: 85, wellness_score_prev: null, alert_count: { high: 0, moderate: 0, low: 0 }, ai_summary_line: 'Hypothyroid — stable on levothyroxine' },
-    { id: 'pat-003', full_name: 'Ahmad bin Ismail', age: 62, last_visit_date: '2026-09-12', wellness_score: 45, wellness_score_prev: 63, alert_count: { high: 1, moderate: 0, low: 0 }, ai_summary_line: 'CKD Stage 3, DM2 — declining renal function' },
+    {
+      id: "pat-001",
+      full_name: "Rajan a/l Kumar",
+      age: 58,
+      last_visit_date: "2026-09-15",
+      wellness_score: 72,
+      wellness_score_prev: 58,
+      alert_count: { high: 2, moderate: 0, low: 0 },
+      ai_summary_line: "DM2, HTN, 3 supplements — 1 high-risk interaction",
+    },
+    {
+      id: "pat-002",
+      full_name: "Priya d/o Ravi",
+      age: 34,
+      last_visit_date: "2026-09-14",
+      wellness_score: 85,
+      wellness_score_prev: null,
+      alert_count: { high: 0, moderate: 0, low: 0 },
+      ai_summary_line: "Hypothyroid — stable on levothyroxine",
+    },
+    {
+      id: "pat-003",
+      full_name: "Ahmad bin Ismail",
+      age: 62,
+      last_visit_date: "2026-09-12",
+      wellness_score: 45,
+      wellness_score_prev: 63,
+      alert_count: { high: 1, moderate: 0, low: 0 },
+      ai_summary_line: "CKD Stage 3, DM2 — declining renal function",
+    },
   ],
 };
 
 export const MOCK_PATIENT_DETAIL = {
-  id: 'pat-001', full_name: 'Rajan a/l Kumar', date_of_birth: '1968-01-15', sex: 'male',
+  id: "pat-001",
+  full_name: "Rajan a/l Kumar",
+  date_of_birth: "1968-01-15",
+  sex: "male",
   health_profile: {
-    conditions: ['Type 2 Diabetes', 'Hypertension'],
-    medications: [{ name: 'Metformin', dosage: '500mg', frequency: 'Twice daily' }, { name: 'Amlodipine', dosage: '5mg', frequency: 'Once daily' }, { name: 'Atorvastatin', dosage: '20mg', frequency: 'Once daily' }],
-    allergies: ['Penicillin'],
+    conditions: ["Type 2 Diabetes", "Hypertension"],
+    medications: [
+      { name: "Metformin", dosage: "500mg", frequency: "Twice daily" },
+      { name: "Amlodipine", dosage: "5mg", frequency: "Once daily" },
+      { name: "Atorvastatin", dosage: "20mg", frequency: "Once daily" },
+    ],
+    allergies: ["Penicillin"],
   },
   wellness_score: 72,
-  wellness_trend: [{ date: '2026-07-15', score: 52 }, { date: '2026-08-15', score: 56 }, { date: '2026-09-15', score: 58 }, { date: '2026-09-16', score: 72 }],
+  wellness_trend: [
+    { date: "2026-07-15", score: 52 },
+    { date: "2026-08-15", score: 56 },
+    { date: "2026-09-15", score: 58 },
+    { date: "2026-09-16", score: 72 },
+  ],
   ai_clinical_summary: {
-    text: 'Rajan, 58M. DM2 (2018). HTN (2019). Metformin 500mg BID, Amlodipine 5mg OD, Atorvastatin 20mg OD. HbA1c: 7.2% (Sep 12, improving from 7.8%). 3 supplements: Vitamin D (safe), Garlic Extract (moderate risk with Amlodipine), Jamu Herbal (HIGH RISK — hepatotoxic). Recommend: discontinue Jamu, order LFT, monitor BP. Score: 72 (up 14).',
-    confidence: 0.89, model_version: 'summarise_v2.1.0', generated_at: '2026-09-16T10:30:00+08:00',
+    text: "Rajan, 58M. DM2 (2018). HTN (2019). Metformin 500mg BID, Amlodipine 5mg OD, Atorvastatin 20mg OD. HbA1c: 7.2% (Sep 12, improving from 7.8%). 3 supplements: Vitamin D (safe), Garlic Extract (moderate risk with Amlodipine), Jamu Herbal (HIGH RISK — hepatotoxic). Recommend: discontinue Jamu, order LFT, monitor BP. Score: 72 (up 14).",
+    confidence: 0.89,
+    model_version: "summarise_v2.1.0",
+    generated_at: "2026-09-16T10:30:00+08:00",
   },
   active_alerts: [
-    { id: 'alt-1', type: 'high_severity_interaction', severity: 'high' as const, message: 'Jamu Herbal + Metformin: Hepatotoxic risk. STOP. Order LFT.', acknowledged: false, generated_at: '2026-09-16T10:30:03+08:00' },
+    {
+      id: "alt-1",
+      type: "high_severity_interaction",
+      severity: "high" as const,
+      message: "Jamu Herbal + Metformin: Hepatotoxic risk. STOP. Order LFT.",
+      acknowledged: false,
+      generated_at: "2026-09-16T10:30:03+08:00",
+    },
   ],
   assessments: [
-    { id: 'asmt-001', wellness_score: 72, risk_score: 65, supplement_count: 3, high_interaction_count: 1, completed_at: '2026-09-16T10:30:03+08:00' },
-    { id: 'asmt-000', wellness_score: 58, risk_score: 45, supplement_count: 3, high_interaction_count: 0, completed_at: '2026-09-15T14:00:00+08:00' },
+    {
+      id: "asmt-001",
+      wellness_score: 72,
+      risk_score: 65,
+      supplement_count: 3,
+      high_interaction_count: 1,
+      completed_at: "2026-09-16T10:30:03+08:00",
+    },
+    {
+      id: "asmt-000",
+      wellness_score: 58,
+      risk_score: 45,
+      supplement_count: 3,
+      high_interaction_count: 0,
+      completed_at: "2026-09-15T14:00:00+08:00",
+    },
   ],
   records: [
-    { id: 'rec-001', record_type: 'lab_report', title: 'HbA1c Test Results', record_date: '2026-09-12', ai_summary: 'HbA1c: 7.2% (improving from 7.8%).', is_shared_with_doctor: true },
+    {
+      id: "rec-001",
+      record_type: "lab_report",
+      title: "HbA1c Test Results",
+      record_date: "2026-09-12",
+      ai_summary: "HbA1c: 7.2% (improving from 7.8%).",
+      is_shared_with_doctor: true,
+    },
   ],
 };
 ```
